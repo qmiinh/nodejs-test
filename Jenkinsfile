@@ -30,6 +30,7 @@ pipeline {
             steps {
             sh 'cat test.xml'
 	    sh 'ls -lrt'
+            sh 'echo hello'
 		}
         }
        stage('build') {
