@@ -16,8 +16,6 @@ pipeline {
             sh 'echo hahaha'
 		}
         }
-
-        }
     }
     post {
         success {
