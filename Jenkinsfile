@@ -28,7 +28,7 @@ pipeline {
         }
        stage('build') {
             steps {
-            sh 'docker build -t registry.gitlab.com/qminhh/test-01 .'
+            sh 'docker build -t registry.gitlab.com/qminhh/test-01:v1 .'
 		}
        }
         stage('push') {
