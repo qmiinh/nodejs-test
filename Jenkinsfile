@@ -26,13 +26,6 @@ pipeline {
 	    junit 'test.xml'
 		}
         }
-        stage('cat test.xml') {
-            steps {
-            sh 'cat test.xml'
-	    sh 'ls -lrt'
-            sh 'echo hello'
-		}
-        }
        stage('build') {
             steps {
             sh 'docker build -t registry.gitlab.com/qminhh/test-01 .'
