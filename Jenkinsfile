@@ -18,7 +18,7 @@ pipeline {
         }
         stage('unit test') {
             steps {
-            sh 'npm test > test.xml'
+            sh 'npm test'
 		}
         }
         stage('write result') {
