@@ -6,7 +6,7 @@ describe("GET /", function () {
     const response = await request.get("/");
 
     expect(response.status).to.eql(200);
-    expect(response.res.text).to.eql("Hello WorldD");
+    expect(response.res.text).to.eql("Hello World");
   });
 });
 
