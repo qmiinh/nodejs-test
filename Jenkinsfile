@@ -13,36 +13,10 @@ pipeline {
         }
         stage('start app') {
             steps {
-            sh 'nohup node index.js &'
+            sh 'echo hahaha'
 		}
         }
-        stage('unit test') {
-            steps {
-            sh 'npm test'
-		}
-        }
-        stage('write result') {
-            steps {
-	    junit 'test.xml'
-		}
-        }
-        stage('cat test.xml') {
-            steps {
-            sh 'cat test.xml'
-	    sh 'ls -lrt'
-		}
-        }
-       stage('build') {
-            steps {
-            sh 'docker build -t registry.gitlab.com/qminhh/test-01 .'
-		}
-       }
-        stage('push') {
-            steps {
-            withDockerRegistry(credentialsId: 'jenkins1234', url: 'https://registry.gitlab.com') {
-            sh 'docker push registry.gitlab.com/qminhh/test-01'
-                    }
-		        }
+
         }
     }
     post {
