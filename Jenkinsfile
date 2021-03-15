@@ -18,13 +18,12 @@ pipeline {
         }
         stage('unit test') {
             steps {
-            sh 'npm test'
+            sh 'npm test > test.xml'
 		}
         }
         stage('write result') {
             steps {
-            sh 'junit'
-	    // junit 'test.xml'
+	    junit 'test.xml'
 		}
         }
         stage('cat test.xml') {
