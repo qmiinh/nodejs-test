@@ -23,7 +23,7 @@ pipeline {
         }
         stage('write result') {
             steps {
-            sh 'junit'
+            junit 'test.xml'
 		}
         }
        stage('build') {
