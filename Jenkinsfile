@@ -44,7 +44,7 @@ pipeline {
             sh """ 
                 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "${USERID}", "text": " \ud83d\udc4d \ud83d\udc4d \ud83d\udc4d \nJobname: ${JOB_NAME} \nBuild number: ${BUILD_NUMBER} \nStatus: SUCCESS \nCommit: ${GIT_COMMIT} ", "disable_notification": true}' ${WEBHOOK_URL}
+     -d '{"chat_id": ${BUILD_LOG} "${USERID}", "text": " \ud83d\udc4d \ud83d\udc4d \ud83d\udc4d \nJobname: ${JOB_NAME} \nBuild number: ${BUILD_NUMBER} \nStatus: SUCCESS \nCommit: ${GIT_COMMIT} ", "disable_notification": true}' ${WEBHOOK_URL}
                 """
         }
         }
