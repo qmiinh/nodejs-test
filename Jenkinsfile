@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('set up dependencies') {
             steps {
-            sh 'echo Helloooooo'
+            sh 'echo Uhu'
 		  }
        	}
     }
